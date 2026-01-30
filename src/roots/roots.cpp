@@ -98,7 +98,7 @@ bool secant(std::function<double(double)> f, double a, double b, double c, doubl
 
     for (int i = 0; i < max_iterations; i++) {
         double fx0 = f(x0);
-        double fx1 = f(x1);
+        double fx1 = f(x1); // These are the y axis positions
 
         if (std::abs(fx1 - fx0) < 1e-12) { // Prevent divison by zero/undefined (checks if y-values are near zero)
             return false;
